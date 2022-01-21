@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Roboto+Slab&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/YJP/src/css/YJP.css">
+
+  <script defer src="https://kit.fontawesome.com/a7842f1d8c.js" crossorigin="anonymous"></script>
+  <script src="/YJP/src/js/graduationwork.js" defer></script>
+  <title>Liam Park</title>
+</head>
+<body>
+  <section class="sidebar">
+    <div class="div_1">통합검색</div>
+    <input list="Integrate_Search" id="search" name="search" />
+    <datalist id="Integrate_Search">
+        <option value="졸업작품">
+        <option value="경력">
+        <option value="자기소개서">
+        <option value="취미생활">
+        <option value="개발노트">
+        <option value="공부">
+      </datalist>
+    <a href="/YJP/YJP.html">박용준</a>
+    <a href="/YJP/html/graduation_work.html">졸업작품</a>
+    <a href="/YJP/html/career.html">경력</a>
+    <a>자기소개서</a>
+    <a>취미생활</a>
+    <a href="/YJP/html/develop_note.html">개발노트</a>
+    <a>공부</a>
+  </section>
+  <section class="sec_sidebar">
+    <div class="sec_sidebar_toggleBtn">
+      <i class="fas fa-bars"></i>
+    </div>
+    <a href="#top" class="sec_sidebar_up">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+  </section>
+  <progress class="web_scroll" value="50" min="0" max="100"></progress>
+  <section class="header">
+    <div class="text">Graduation Work of Liam Park</div>
+  </section>
+  <section class="YJ_body">
+    <div class="top">
+      <img class ="container_LtR_50" src="/YJP/IMG/GW4.jpg">
+      <div class ="container_LtR_50">Power Conversion System</div>
+    </div>
+    <details id="graduationwork">
+      <summary class="head">졸업작품</summary>
+      졸업작품 다운로드 링크 : <a class="doc" href="/YJP/link/졸업작품최종보고서양식_2020년 _D02조.hwp" download="">졸업작품최종보고서.hwp</a>
+      &nbsp; <a class="doc" href="/YJP/link/D02_BESS를 이용한 PCS 만들기_기말보고서.pptx" download="">BESS를 이용한 PCS.pptx</a><br><br>
+      <p>PCS는 Power Conversion System으로 배터리와 AC-Grid 뿐만 아니라 다양한 부하에 대해 전력을 변환해줍니다.<br> 저희는 여기에 더해 EMS를 더해 PCS가 부하에 대해 능동적으로 충방전을 하여 사용자의 전기료를 줄여주는 것을 목표로합니다.
+      </p>
+      <br><br>
+      <div class="container_UtD">
+        <h1>연구 계획 및 구성도</h1>
+        <img class="full_img" src="/YJP/IMG/GW5.jpg" alt="" srcset="">
+      </div>
+      <div class="container_LtR">
+        <div class="container_LtR_50">
+            <img class="half_img" src="/YJP/IMG/GW1.jpg" alt="" srcset="">
+        </div>
+        <div class="container_LtR_50">
+            <img class="half_img" src="/YJP/IMG/GW2.jpg" alt="" srcset="">
+        </div>
+      </div>
+      <div class="container_LtR">
+        <div class="container_UtD">
+          <h1>시스템 설계 사양</h1>
+          <p>
+            PCS는 정격 10kW급으로 32A 부하에 견딜 수 있게 설계됐습니다. ESS의 용량은 각각 100kWh와 200kWh로 설계했습니다. Grid가 부담하는 최대 전력은 200kWh로 설정했고, 부하는 미래관 건물의 2019년 12월 9일의 데이터를 기준으로 사용하였습니다. 배터리의 기준 충전량은 90으로 설정했습니다. 계약전력에 대한 가격은 한전에서 제공한 전기요금표를 기준으로 작성했습니다. PCS의 구성 요소로는 태양광 에너지를 배터리에 저장시킬 수 있는 부스트 컨버터, 계통 연계를 위한 Bidirectional Inverter, 배터리와 DC-Link의 전력을 변환시키는 역할을 할 Bidirectional Buck Boost Converter가 있습니다. 배터리는 210V를 기준으로 하고, DC-Link의 전압은 650V로 정했습니다. 사용한 Grid 사양은 3상4선식 Line to Line, RMS AC380V를 사용했습니다. 
+          </p>
+        </div>
+        <img class="half_img" src="/YJP/IMG/GW3.jpg" alt="" srcset="">
+      </div>
+      <div class="container_LtR">
+        <img class="double_img" src="/YJP/IMG/GW10.jpg" alt="" srcset="">
+        <div class="container_LtR_25">
+          <h1>설계 계획</h1>
+          <p>EMS에 대해서, 우리나라 전력 요금표를 보고 전기 요금을 최소로 내는 전략을 짜고, 시뮬레이션을 진행 했습니다.
+            우리나라는 최대 전력 사용량에 따라 갑 호와 을 호 전기요금이 각각 다르게 책정 되며
+            을 호의 경우에는 시간대별로 경부하, 중간부하, 최대부하로 전기요금이 다르게 책정됩니다.
+            따라서, 다음과 같이 Peak Shaving을 통한 최대 전력 감소 전략과 시간대별로 전력 사용을 다르게 하는 전략을 더해 짠다면, 전기요금을 싸게 쓸 수 있을 것으로 봤습니다.
+          </p>
+        </div>
+      </div>
+      <div class="container_LtR">
+        <img class="double_img" src="/YJP/IMG/GW6.jpg" alt="" srcset="">
+        <div class="container_LtR_25">
+          <h1>전력 최적화 전략 (EMS)</h1>
+          <p>Quadprog로 요금이 비쌀때 배터리의 전력을 방전하고, 요금이 쌀때  배터리의 전력을 충전하는 방식으로 이윤을 볼 수 있습니다.<br>
+            미래관 1년 중 가장 높은 날의 전력사용량을 PL로 뒀습니다.<br>
+            여기에 70kW급 태양광 발전을 상정하고 PeakShaving을 200Kw로 정합니다.
+            해당 시뮬레이션으로 정격출력을 25kwh로 제한해 하루에1만 4715원의  이윤을 확인 할 수 있습니다.
+            </p>
+        </div>
+      </div>
+      <div class="container_LtR">
+        <img class="double_img" src="/YJP/IMG/GW7.jpg" alt="" srcset="">
+        <div class="container_LtR_25">
+          <h1>전력 최적화 전략 (EMS)</h1>
+          <p>이 시뮬레이션에서는 PCS의 정격 입출력을 낮춰 8064원의 이득을 본 것을 확인 가능합니다.
+          </p>
+        </div>
+      </div>
+      <div class="container_LtR">
+        <img class="double_img" src="/YJP/IMG/GW8.jpg" alt="" srcset="">
+        <div class="container_LtR_25">
+          <h1>전력 최적화 전략 (EMS)</h1>
+          <p>해당 시뮬레이션의 포뮬레이션은 다음과 같습니다.
+            우선 목적 함수를 설정한 뒤 각각의 변수들에 관계를 부여합니다.
+            </p>
+        </div>
+      </div>
+      <div class="container_LtR">
+        <img class="double_img" src="/YJP/IMG/GW9.jpg" alt="" srcset="">
+        <div class="container_LtR_25">
+          <h1>전력 최적화 전략 (EMS)</h1>
+          <p>그리고 목적함수와 Decision Variable과 제한 조건으로 세부 사양을 정해
+            쿼드라틱 프로그래밍에 포뮬레이션 하여 결과값을 얻어 낼 수 있습니다.
+          </p>
+        </div>
+      </div>
+      <div class="container_LtR">
+        <img class="double_img" src="/YJP/IMG/GW11.jpg" alt="" srcset="">
+        <div class="container_LtR_25">
+          <h1>EMS on PCS</h1>
+          <p>
+            한전에서 제작한 단선결선도를 바탕으로 PCS를 전력량계 밑에 부착한다고 가정하였습니다.
+          </p>
+        </div>
+      </div>
+      <div class="container_LtR">
+        <img class="double_img" src="/YJP/IMG/GW12.jpg" alt="" srcset="">
+        <div class="container_LtR_25">
+          <h1>EMS on PCS</h1>
+          <p>
+            PSIM으로 설계한 회로도 입니다.
+          </p>
+        </div>
+      </div>
+      <div class="container_LtR">
+        <img class="double_img" src="/YJP/IMG/GW13.jpg" alt="" srcset="">
+        <div class="container_LtR_25">
+          <h1>EMS on PCS</h1>
+          <p>
+            순서대로 PV, DC-Load,  Converter, DC-Link, Inverter, AC Load입니다.
+            결과의 단순화를 위해서 시뮬레이션에서 PV와, DC-Load는 빼고 진행 했습니다.
+          </p>
+        </div>
+      </div>
+      <div class="container_LtR">
+        <img class="double_img" src="/YJP/IMG/GW14.jpg" alt="" srcset="">
+        <div class="container_LtR_25">
+          <h1>EMS on PCS</h1>
+          <p>
+            제어기를 동작시키는 DLL 파일은 C언어로 작성됐으며
+            PLL 제어기, 인버터의 전압, 전류제어기 제어, 컨버터의 전류제어기(전력), 돌입전류를 방지하기 위한 릴레이 제어 및 시퀀스 제어를 합니다.
+            또, EMS에서 받아온 데이터를 읽는 역할을 수행합니다.
+          </p>
+        </div>
+      </div>
+      <div class="container_LtR">
+        <img class="double_img" src="/YJP/IMG/GW15.jpg" alt="" srcset="">
+        <div class="container_LtR_25">
+          <h1>EMS on PCS</h1>
+          <p>
+            먼저 릴레이 제어를 통한 DC-Link 전압과 돌입전류를 확인 할 수 있습니다.
+            인버터 동작을 통한 전압 제어를 확인 할 수 있습니다.
+            그 다음으로는 컨버터 동작을 통한 전력제어를 확인 할 수 있습니다.
+            마지막으로 Load 가 생겼을때, 컨버터의 전력 제어를 사용하여, Inv전류에 비해
+            Grid의 부담이 덜 가는것을 확인 할 수 있습니다. 
+          </p>
+        </div>
+      </div>
+      <div class="container_LtR">
+        <img class="double_img" src="/YJP/IMG/GW16.jpg" alt="" srcset="">
+        <div class="container_LtR_25">
+          <h1>EMS on PCS</h1>
+          <p>
+            컨버터 제어기를 통해 EMS의 배터리의 충 방전 결과값을 물리층에서 제어 할 수 있는걸 확인 했습니다.
+          </p>
+        </div>
+      </div>
+      <div class="container_LtR">
+        <img class="double_img" src="/YJP/IMG/GW17.jpg" alt="" srcset="">
+        <div class="container_LtR_25">
+          <h1>실물 제작 과정</h1>
+          <p>
+            저희는 실물제작 설계과정에서
+            그림 같은 기능을 가진 인터페이스 보드와
+            다음 표와 같은 정격의 PCS를 만들고자 했습니다.
+          </p>
+        </div>
+      </div>
+      <div class="container_LtR">
+        <img class="double_img" src="/YJP/IMG/GW18.jpg" alt="" srcset="">
+        <div class="container_LtR_25">
+          <h1>실물 제작 과정</h1>
+          <p>
+            완성된 인터페이스 보드
+          </p>
+        </div>
+      </div>
+      <div class="container_LtR">
+        <img class="double_img" src="/YJP/IMG/GW19.jpg" alt="" srcset="">
+        <div class="container_LtR_25">
+          <h1>실물 제작 과정</h1>
+          <p>
+            컨버터 실험을 진행
+          </p>
+        </div>
+      </div>
+      <div class="container_LtR">
+        <img class="double_img" src="/YJP/IMG/GW20.jpg" alt="" srcset="">
+        <div class="container_LtR_25">
+          <h1>실물 제작 과정</h1>
+          <p>
+            전압제어와 전류제어를 확인.
+          </p>
+        </div>
+      </div>
+      <div class="container_LtR">
+        <img class="double_img" src="/YJP/IMG/GW1.jpg" alt="" srcset="">
+        <div class="container_LtR_25">
+          <h1>실물 제작 과정</h1>
+          <p>
+            그래서 완성된 H/W는  사진에 보이는 렉에 들어가게 되고, 각 위치에 배터리와 3상 계통이 위치하게 됩니다.
+          </p>
+        </div>
+      </div>
+      <div class="container_LtR">
+        <img class="double_img" src="/YJP/IMG/GW2.jpg" alt="" srcset="">
+        <div class="container_LtR_25">
+          <h1>실물 제작 과정</h1>
+          <p>
+            구성은 전압센서, .DC-Link 전류센서
+            인버터단 게이트 드라이버 DSP보드, 모듈, 컨버터단 게이트 드라이버가 있습니다.
+          </p>
+        </div>
+      </div>
+      <div class="container_LtR">
+        <img class="double_img" src="/YJP/IMG/GW3.jpg" alt="" srcset="">
+        <div class="container_LtR_25">
+          <h1>실물 제작 과정</h1>
+          <p>
+            Isolation Circuit과 IGBT 전류센서, 방열판과 Fan, 5V 15V SMPS가 있습니다.
+          </p>
+        </div>
+      </div>
+      <div class="container_LtR">
+        <img class="double_img" src="/YJP/IMG/GW22.jpg" alt="" srcset="">
+        <div class="container_LtR_25">
+          <h1>실물 제작 과정</h1>
+          <p>
+            전압센서와 인버터 전류센서
+            3상 인덕터
+            인버터 초충저항, 컨버터 초충저항이 있습니다.
+          </p>
+        </div>
+      </div>        
+      <div class="container_LtR">
+        <img class="double_img" src="/YJP/IMG/GW23.jpg" alt="" srcset="">
+        <div class="container_LtR_25">
+          <h1>실물 제작 과정</h1>
+          <p>
+            배터리와 연결될 Main 써킷브레이커가 있고, 초충용 3상 써킷 브레이커, 
+            컨버터 인덕터, 컨버터 초충릴레이가 있습니다.
+          </p>
+        </div>
+      </div>
+      <div class="container_LtR">
+        <div class="container_LtR_50">
+          <div>
+            <h1>기대 및 효과</h1>
+            <p><li>건물을 소유한 개인, 전력 공급자 양측이 생산,소비하는 전력을 조정하기 때문에
+              효율성, 경제성을 챙길 수 있습니다.</li>
+            <li>EMS를 통해 높은 신뢰성과 경제적 효율성을 챙길 수 있어 중간 사용자의 참여를 강화할 수 있습니다.</li>
+            <li>정부 또는 첫 번째 공급자의 요청으로 인한 Ancillary Service가 가능하여 국가 전력망에 안정감을 
+              더하며 나아가 장거리 대전력망을 이용 가능하게 할 인프라가 될 수 있습니다.</li>
+            <li>전력 예비력을 확보, 최대 부하 시간을 분산시킴으로써 최대 부하 억제효과와 이를 통해 대규모 정전사고가 발생시 효과적으로 대응할 수 있습니다.
+            </li>
+            <li>전력생산 효율성을 증대하여 탄소저감 효과를 기대할 수 있습니다.</li>
+            </p>
+          </div>
+        </div>
+        <div class="container_LtR_50">
+          <div>
+            <h1>한계 및 보완할 점</h1>
+            <p>
+              <li>MATLAB 시뮬레이션에서 완벽한 전력 손실 모델이 없어서 Test해보지 못 했다.
+              </li>
+              <li>PSIM 시뮬레이션에서 완벽한 배터리 모델을 사용하지 못 했다.
+              </li>
+              <li>고압의 배터리를 다루는 것에 미숙해 안전상의 문제로 계통에 연결해서 실험해보지는 못 했다.
+              </li>
+              <li>제작비용의 문제로 정격용량에 적합한 소자를 사용해보지 못 했다.
+              </li>
+            </p>
+          </div>
+        </div>
+      </div>
+    </details>
+    <details id="paper">
+      <summary class="head">Paper</summary>
+      <div class="container_UtD">
+        <div>
+          <br>IEEE Access<br>
+          <h1>
+            A Quadratic Programming-Based Power Dispatch Method for a DC-Microgrid
+          </h1>
+          <br>IEEE Power&Energy Society Section
+          <br>Received November 6, 2020, accepted November 15, 2020, date of publication November 19, 2020,
+          date of current version December 8, 2020.
+        </div>
+        <br>논문 다운로드 링크 : <a class="doc" href="/YJP/link/QP.pdf" download="">QP.pdf</a><br>
+        <div class="container_LtR">
+          <h1>English(US)</h1>
+          <h1>한국어</h1>
+        </div>
+        <div class="container_LtR">
+          <div class="container_LtR_50">
+            <p>This Paper deals with the optimum energy management of Microgrid (MG) having
+              Energy-Storage System(ESS)s. Recently, the importance of retaining the profits of MG owners and the
+              needs of providing additional requirements to the electric grid are rising. To accommodate these needs
+              systematically, the Quadratic Programming (QP), one of the simplest and effective optimization method,
+              is gaining attention. The QP has been used for similar cases before, but unlike the known advantages of
+              early QP studies, some of the subsequent papers have been conducted in an inappropriate direction and may
+              be overshadowed. Therefore in this paper, an extended and more practical QP cost function considering
+              the realistic operating conditions is proposed, and the advantages of the original methods are revisited with
+              comparisons. As a result, the proposed method retains the genuine features of QP, such as peak power shaving
+              and assuring the power reserve rate, and can be simply extended to include Electric Vehicle (EV)s into the
+              optimization. Additionally, the practical issues of implementing the QP in real-time have been discussed
+              and resulted in both improved optimization speed by 58% using the cost function reformulation and the
+              robustness with the forecast mismatching.</p>
+            </div>
+          <div class="container_LtR_50">
+            <p>본 논문은 ESS(Energy-Storage System)를 구비한 마이크로그리드(MG)의 최적 에너지 관리에 대해 다룬다. 최근에는 MG 소유자의 보호를 유지하는 것의 중요성과 전력망에 대한 추가 요구 사항을 제공해야 할 필요성이 증가하고 있습니다. 이러한 요구를 체계적으로 수용하기 위해 가장 간단하고 효과적인 최적화 방법 중 하나인 QP(Quadratic Programming)가 주목받고 있습니다.
+              QP는 이전에도 유사한 사례에 사용되었지만 초기 QP 연구의 알려진 이점과 달리 일부 후속 논문은 부적절한 방향으로 수행되어 가려질 수 있습니다. 따라서 본 논문에서는 현실적인 운영 조건을 고려하여 확장되고 보다 실용적인 QP 비용 함수를 제안하고, 비교를 통해 기존 방법의 장점을 재검토한다.
+              결과적으로 제안된 방법은 피크 전력 절감 및 전력 예비율 보장과 같은 QP의 진정한 기능을 유지하고 최적화에 전기 자동차(EV)를 포함하도록 간단히 확장할 수 있습니다.
+              또한 실시간으로 QP를 구현하는 실제 문제가 논의되었으며 비용 함수 재구성을 사용하여 최적화 속도가 58% 향상되고 예측 불일치로 robustne가 향상되었습니다.</p>
+          </div>
+        </div>
+      </details>
+    </section>
+    <section class="contact">
+      <div class="container_LtR_40">
+        <img src="/YJP/IMG/박용준1.jpg" alt="">
+      </div>
+      <div class="container_UtD">
+        <div class="head">Contact</div>
+        <li>Address : 서울특별시 서대문구 북아현로22길 18 (힐사이드빌) 302호</li>
+        <li>E-mail : june3004@naver.com</li>
+        <li>Tel : 010-5886-9393</li>
+      </div>
+    </section>
+    <section class="about_page">
+      이 페이지는 프로필, 일기장, 정보공유, 공부 포트폴리오로 만들 예정입니다.
+    </section>
+    <section>
+      <footer clss="BGcopyright">
+      </footer>
+      <footer class="footbar">
+        <div class="BGCopyright">Angela Roma 님의 사진, 출처: Pexels, Ammar Ahmed 님의 사진, 출처: Pexels, Thirdman 님의 사진, 출처: Pexels</div>
+        <div class="footbar_menu">@2022 Park Yong Jun All rights reserved.</div>
+      </footer>
+    </section>
+</body>
+</html>
