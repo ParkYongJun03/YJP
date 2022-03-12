@@ -209,7 +209,7 @@ p {
 }
 .top .font_size18 div {
   margin-top: 10px;
-  text-size-adjust: ;
+  text-size-adjust: auto;
 }
 /* animation_inAndout */
 .animation_inAndout {
