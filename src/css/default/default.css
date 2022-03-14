@@ -1,0 +1,93 @@
+body {
+  height: auto;
+  margin: 0%;
+  font-family: "Noto Sans KR", sans-serif;
+  font-size: 16px;
+  /* font-family: "Roboto Slab", serif; */
+}
+li {
+  list-style: none;
+}
+input {
+  background-color: #f0ffff;
+  border: #454545 solid 2px;
+  border-radius: 2px;
+}
+a:link {
+  text-decoration: none;
+  color: #ea5832;
+}
+a:visited {
+  text-decoration: none;
+  color: #ea5832;
+}
+.YJ_body {
+  background-color: #f0f0f0;
+  color: #045560;
+}
+.container_LtR {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.container_UtD {
+  display: flex;
+  flex-direction: column;
+}
+.container_LtR_100 {
+  width: 100%;
+}
+.container_LtR_10 {
+  width: 10%;
+}
+.container_LtR_25 {
+  width: 25%;
+}
+
+.container_LtR_40 {
+  width: 40%;
+}
+.container_LtR_50 {
+  width: 50%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.container_LtR_66 {
+  width: 66%;
+}
+#left {
+  text-align: right;
+  margin-right: 500px;
+}
+#right {
+  text-align: left;
+  margin-left: 500px;
+}
+.font_size18 {
+  font-size: 18px;
+}
+.sidebar a:link {
+  color: whitesmoke;
+}
+.sidebar a:visited {
+  color: whitesmoke;
+}
+.header {
+  position: relative;
+  top: 7px;
+  background-color: #141414;
+  color: whitesmoke;
+  height: auto;
+  z-index: 8;
+}
+.header {
+  text-align: center;
+}
+
+summary {
+  cursor: pointer;
+}
+p {
+  width: 85%;
+}

@@ -1,0 +1,57 @@
+/* contact */
+.contact {
+  width: 100%;
+  display: grid;
+  grid-template: 1fr / 30% 70%;
+  justify-items: center;
+}
+.contact img {
+  grid-area: 1 / 1 / 2/ 2;
+  height: 40vh;
+}
+.contact .information {
+  grid-area: 1 / 2 / 2/ 3;
+  background-color: #015762;
+  justify-content: space-evenly;
+  width: 100%;
+  height: auto;
+  text-align: left;
+}
+.contact .head {
+  margin-left: 72px;
+  color: #f7dc50;
+  font-size: 72px;
+}
+.contact li {
+  margin-left: 72px;
+  color: #fcfffb;
+  padding: 18px;
+  list-style: none;
+}
+
+/* about this page */
+.about_page {
+  width: 100%;
+  text-align: center;
+}
+/* footbar */
+.footbar {
+  display: block;
+  background: #341414;
+  width: 100%;
+  height: 80px;
+  align-items: center;
+  bottom: 0;
+  color: whitesmoke;
+}
+.BGCopyright,
+.footbar_menu {
+  justify-content: center;
+  display: flex;
+  list-style: none;
+  padding: 8px 12px;
+}
+.footbar_menu:hover {
+  border-radius: 4px;
+  background-color: #3c8d5b;
+}
