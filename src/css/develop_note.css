@@ -4,7 +4,7 @@
   grid-template: repeat(2, 1fr) / repeat(2, 1fr);
   background: #cdc9c6;
 }
-.diary {
+.details {
   width: 85%;
   margin-left: 10px;
   color: #045560;

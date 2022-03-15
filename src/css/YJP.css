@@ -72,28 +72,19 @@ details {
 }
 
 /* about */
-#about,
-#abstract,
-#graduationwork,
-#paper {
+.details {
   width: 85%;
   margin-left: 3%;
   text-align: center;
 }
-#graduationwork {
+.details {
   background-color: #ffffff;
 }
-#about .head,
-#abstract .head,
-#graduationwork .head,
-#paper .head {
+.details .head {
   font-size: 52px;
   background-color: #f0f0f0;
 }
-#about .head:hover,
-#abstract .head:hover,
-#graduationwork .head:hover,
-#paper .head:hover {
+.details .head:hover {
   background-image: linear-gradient(
     to right,
     #eee 0%,
@@ -102,41 +93,41 @@ details {
     #eee 100%
   );
 }
-#graduationwork .container_LtR {
+.details .container_LtR {
   justify-content: space-between;
   margin: 25px 0px;
 }
-#paper .container_LtR {
+.details .container_LtR {
   justify-content: space-around;
   margin: 25px 0px;
 }
-#graduationwork .container_LtR_25,
-#paper .container_LtR_50 {
+.details .container_LtR_25,
+.details .container_LtR_50 {
   text-align: left;
 }
-#graduationwork li {
+.details li {
   list-style: inside square;
   font-size: 16px;
   margin-top: 5px;
 }
-#abstract .container_LtR_50 {
+.details .container_LtR_50 {
   border: #c2e59c 3px solid;
   border-radius: 3px;
 }
-#about .novel {
+.details .novel {
   text-align: left;
 }
 .doc:link {
   color: #ea5832;
 }
-#graduationwork .half_img {
+.details .half_img {
   max-width: 42vw;
 }
-#graduationwork .double_img {
+.details .double_img {
   max-width: 62vw;
   border: 1px solid #454545;
 }
-#graduationwork .full_img {
+.details .full_img {
   width: 84vw;
 }
 /* photo */
