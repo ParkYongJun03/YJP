@@ -1,0 +1,155 @@
+details {
+  margin: 72px 0px;
+}
+/* YJ_body */
+
+.top {
+  background: #cdc9c6;
+  display: flex;
+  align-items: center;
+}
+.YJ_body #top_right {
+  margin-left: 24px;
+  text-align: left;
+  font-size: 42px;
+  width: 50%;
+  color: #242424;
+}
+.top .container_LtR_50 {
+  font-size: 42px;
+  justify-content: space-between;
+  color: #242424;
+}
+.emphasis_mint {
+  color: rgb(86, 255, 156);
+}
+.emphasis_red {
+  color: rgb(224, 9, 9);
+}
+.top .font_size18 div {
+  margin-top: 10px;
+}
+/* animation_inAndout */
+.animation_inAndout {
+  position: absolute;
+  font-size: 42px;
+  left: 35%;
+  top: 10%;
+  transform: rotate(15deg);
+}
+.animation_inAndout span {
+  display: inline-block;
+  color: red;
+  text-shadow: 0px 0px 0px black;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+.animation_inAndout span:nth-child(1) {
+  animation-name: animation_inAndoutleft;
+}
+.animation_inAndout span:nth-child(2) {
+  animation-name: animation_inAndoutleft;
+  animation-delay: 0.3s;
+}
+.animation_inAndout span:nth-child(3) {
+  animation-name: animation_inAndoutleft;
+  animation-delay: 0.6s;
+}
+
+@keyframes animation_inAndoutleft {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    font-size: 52px;
+    opacity: 1;
+  }
+  100% {
+    /* transform: skew(30deg) translateY(-10%);
+    text-shadow: 0px 0px 20px; */
+    opacity: 0;
+  }
+}
+
+/* about */
+.details {
+  width: 85%;
+  margin-left: 3%;
+  text-align: center;
+  background-color: #ffffff;
+}
+.details .head {
+  font-size: 52px;
+  background-color: #f0f0f0;
+}
+.details .head:hover {
+  background-image: linear-gradient(
+    to right,
+    #eee 0%,
+    #e5e5be 30%,
+    #c2e59c 70%,
+    #eee 100%
+  );
+}
+.container {
+  display: grid;
+  grid-template: 52px 1fr / 1fr 1fr;
+}
+.container .head2 {
+  font-size: 2rem;
+}
+.contents {
+  display: grid;
+  grid-template: repeat(12, 1fr) / 1fr 4fr;
+}
+.contents div {
+  padding: 0.3rem;
+  margin: 0.05rem;
+  border: rgb(202, 185, 149) 0.01rem solid;
+}
+
+.details .novel {
+  text-align: left;
+}
+.doc:link {
+  color: #ea5832;
+}
+.details .half_img {
+  max-width: 42vw;
+}
+.details .double_img {
+  max-width: 62vw;
+  border: 1px solid #454545;
+}
+.details .full_img {
+  width: 84vw;
+}
+/* photo */
+
+.photo {
+  max-width: 100%;
+  height: 1600px;
+  background-image: url(../../IMG/BG2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  /* border: #ea5832 5px solid; */
+}
+.photo .container_LtR {
+  justify-content: space-between;
+  margin: 50px;
+}
+.photo img {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+}
+/* .photo .shape {
+  width: 26%;
+  height: 26%;
+  left: 24%;
+  top: 268%;
+  background: pink;
+  position: absolute;
+  z-index: 1;
+  transform: rotate(3deg);
+} */

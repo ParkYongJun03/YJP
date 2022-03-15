@@ -9,7 +9,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Roboto+Slab&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../src/css/develop_note.css">
-  <link rel="stylesheet" href="../src/css/default.css">
   <link rel="stylesheet" href="../src/css/default/default.css">
   <link rel="stylesheet" href="../src/css/default/default_sidebar.css">
   <link rel="stylesheet" href="../src/css/default/default_scroll.css">
@@ -50,40 +49,18 @@
   </section>
   <progress class="web_scroll" value="50" min="0" max="100"></progress>
   <section class="header">
-    <div>Develop Note of Liam Park</div>
+    <div>오늘의 공부</div>
   </section>
   <section class="YJ_body">
-    <div class="top">
-      <div class="font_size18">
-        2022-01-19
-      </div>
-      <p>나의 첫 개발 노트 겸 일기장. 계속 써야지.. 써야지.. 하면서도 맨날 미루다가 
-        할게 너무 많고 정리가 필요해서 여기다가 간단히 정리하고 자려고 한다.
-        우선 오늘 '박용준' 탭이랑 '졸업작품' 탭을 리팩토링을 했다. css가 너무 지저분해서 리팩토링을 한 것인데
-        여전히 지저분한건.... 시간을 썼는데도 이정도 수준이라 여전히 불만족스럽다. 그래도 희망적인건 Animation에 대해서 찾다가
-        우연히 https://cssgridgarden.com/#ko 라는 사이트에 들어가서 grid에 대한 정보를 얻었다.
-        그동안은 div에 wrapper(지금 까지 하던걸 Wrapper라고 하는지도 방금 처음 알았다.)를 싸서 수평정렬, 수직정렬을 하고 있었는데
-        grid에 대해서 배운다면 한결 편해질 것이다.
-        <br>
-        그리고 Animation에 대해서 알아보다가 https://animista.net/play/entrances/flicker-in라는 미친 사이트를 발견했는데
-        이걸 사용해서 '박용준' 탭을 좀 더 강화 할 수 있을것 같다.... 근데 그럴라면 css파일이 또 더러워질텐데 sass를 먼저 배우고 할지 또 고민이다.
-        <br>
-        생각 정리하는 김에 지금 css도 어떤 포맷은 다른 곳에도 쓰고 싶은 욕심이 들고, 어떤 건 따로 관리 하고싶은데
-        sass를 배우면 한번에 될 지 모르겠다. 그리고 html에서 header, sidebar, footer를 들고 올때마다 js, css를 세트로 꼭 가지고 다녀야하는건가?
-        이거 계속 들고다니니까 나중에 홈페이지가 커졌을때 어떻게 유지 보수 할지 벌써부터 막막하다.
-        <br><br>
-        <span class="emphasis_red">
-          그래서... 오늘 내가 주는 숙제<br>
-          1. cssgridgarden.com/#ko로 그리드 배우기<br>
-          2. sass 배우기<br>
-          3. Animation으로 바를 쭈욱 내리 긋는거 구현하기<br>
-          4. https://animista.net/play/entrances/flicker-in 사이트로 박용준 탭 강화하기<br>
-          5. https://joshua-dev-story.blogspot.com/2020/11/javascript-css-scroll-animation.html#toc-65-1 이거 다시가서 배우기<br>
-        </span>
-      </p>
-    </div>
-  </section>
+    <details class="diary">
+      <summary class="date">2022-03-15</summary>
+      <span class="emphasis_red">rem</span>rem(root em)은 최상위 요소인 html요소에 비례하여 크기를 가지는 상대적인 길이.<br>
+      <span class="emphasis_red">em</span>부모 태그의 영향을 받는 상대적인 길이.<br>
+      반응형 탭에 중요한 요소이니 까먹지 말자
 
+    </details>
+
+  </section>
   <section class="contact">
     <img src="../IMG/박용준1.jpg" alt="">
     <div class="information">
