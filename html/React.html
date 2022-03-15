@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Roboto+Slab&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../src/css/React.css">
+  <link rel="stylesheet" href="../src/css/default/default.css">
+  <link rel="stylesheet" href="../src/css/default/default_sidebar.css">
+  <link rel="stylesheet" href="../src/css/default/default_scroll.css">
+  <link rel="stylesheet" href="../src/css/default/default_contact.css">
+
+  <script defer src="https://kit.fontawesome.com/a7842f1d8c.js" crossorigin="anonymous"></script>
+  <script src="../src/js/sidebar.js" defer></script>
+  <script src="../src/js/web_scroll.js" defer></script>
+  <title>Liam Park</title>
+</head>
+<body>
+  <section class="sidebar">
+    <div class="div_1">통합검색</div>
+    <input list="Integrate_Search" id="search" name="search" />
+    <datalist id="Integrate_Search">
+        <option value="졸업작품">
+        <option value="경력">
+        <option value="자기소개서">
+        <option value="취미생활">
+        <option value="개발노트">
+        <option value="공부">
+      </datalist>
+    <a href="YJP.html">박용준</a>
+    <a href="graduation_work.html">졸업작품</a>
+    <a href="career.html">경력</a>
+    <a>자기소개서</a>
+    <a>취미생활</a>
+    <a href="develop_note.html">개발노트</a>
+    <a href="study.html">공부</a>
+  </section>
+  <section class="sec_sidebar">
+    <div class="sec_sidebar_toggleBtn">
+      <i class="fas fa-bars"></i>
+    </div>
+    <a href="#top" class="sec_sidebar_up">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+  </section>
+  <progress class="web_scroll" value="50" min="0" max="100"></progress>
+  <section class="header">
+    <div>React</div>
+  </section>
+  <section class="YJ_body">
+    <details class="details">
+      <summary class="date">현재 경로에 React 설치</summary>
+      1. 터미널에 들어가서 install npm
+      2. npm install -g yarn
+      3. npm install -g create-react-app
+      4. create-react-app client
+    </details>
+    <details class="details">
+      <summary class="date">React 시작</summary>
+      1. cd client
+      2. yarn start해서 React 서버 실행
+    </details>
+  </section>
+  <section class="contact">
+    <img src="../IMG/박용준1.jpg" alt="">
+    <div class="information">
+      <div class="head">Contact</div>
+      <li>Address : 서울특별시 서대문구 북아현로22길 18 (힐사이드빌) 302호</li>
+      <li>E-mail : june3004@naver.com</li>
+      <li>Tel : 010-5886-9393</li>
+    </div>
+  </section>
+  <section class="about_page">
+    이 페이지는 프로필, 일기장, 정보공유, 공부 포트폴리오로 만들 예정입니다.
+  </section>
+  <section>
+    <footer clss="BGcopyright">
+    </footer>
+    <footer class="footbar">
+      <div class="BGCopyright">Angela Roma 님의 사진, 출처: Pexels, Ammar Ahmed 님의 사진, 출처: Pexels, Thirdman 님의 사진, 출처: Pexels</div>
+      <div class="footbar_menu">@2022 Park Yong Jun All rights reserved.</div>
+    </footer>
+  </section>
+</body>
+</html>

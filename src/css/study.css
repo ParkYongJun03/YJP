@@ -1,28 +1,33 @@
 /* YJ_body */
-p {
-  width: 85%;
-}
-.YJ_body,
-.contact,
-.about_page {
-  background-color: #f0f0f0;
-  color: #045560;
-}
-.top {
+.YJ_body {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
   background: #cdc9c6;
-  display: flex;
-  flex-direction: column;
 }
-.top .container_career {
+summary {
+  font-size: 1.5rem;
+  text-align: left;
+}
+summary::marker {
+  content: ">";
+  color: brown;
+}
+.details {
+  width: 85%;
+  margin-left: 10px;
+  color: #045560;
+  margin: 1rem;
+}
+.study {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
   text-align: center;
+  font-size: 1.2rem;
+  margin: 0.5rem;
 }
-.emphasis_mint {
-  color: rgb(86, 255, 156);
+.date {
+  width: 85%;
 }
 .emphasis_red {
   color: rgb(224, 9, 9);
-}
-.top .font_size18 div {
-  margin-top: 10px;
-  text-size-adjust: ;
 }

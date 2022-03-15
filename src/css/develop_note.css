@@ -9,11 +9,18 @@
   margin-left: 10px;
   color: #045560;
 }
+summary {
+  font-size: 1.5rem;
+}
+summary::marker {
+  content: ">";
+  color: brown;
+}
 .date {
   width: 85%;
 }
 details {
-  margin: 15px 15px;
+  margin: 1rem;
 }
 .emphasis_red {
   color: rgb(224, 9, 9);
