@@ -1,6 +1,8 @@
 import logo from './logo.svg';
+import React from 'react';
 import './App.css';
-
+import ImportComponent from './R003_ImportComponent'
+import LifecycleEx from './R006_LifecycleEx'
 function App() {
   return (
     <div className="App">
@@ -17,6 +19,9 @@ function App() {
         >
           Learn React
         </a>
+        <h1>시작해볼까?</h1>
+        <ImportComponent></ImportComponent>
+        <LifecycleEx prop_value = 'FromApp.js'></LifecycleEx>
       </header>
     </div>
   );

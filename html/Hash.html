@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Open+Sans:wght@300&family=Roboto+Slab&display=swap" rel="stylesheet">  <link rel="stylesheet" href="../src/css/React.css">
+  <link rel="stylesheet" href="../src/css/default/default.css">
+  <link rel="stylesheet" href="../src/css/default/default_sidebar.css">
+  <link rel="stylesheet" href="../src/css/default/default_scroll.css">
+  <link rel="stylesheet" href="../src/css/default/default_contact.css">
+
+  <script defer src="https://kit.fontawesome.com/a7842f1d8c.js" crossorigin="anonymous"></script>
+  <script src="../src/js/sidebar.js" defer></script>
+  <script src="../src/js/web_scroll.js" defer></script>
+  <title>Liam Park</title>
+</head>
+<body>
+  <section class="sidebar">
+    <div class="div_1">통합검색</div>
+    <input list="Integrate_Search" id="search" name="search" />
+    <datalist id="Integrate_Search">
+        <option value="졸업작품">
+        <option value="경력">
+        <option value="자기소개서">
+        <option value="취미생활">
+        <option value="개발노트">
+        <option value="공부">
+      </datalist>
+    <a href="YJP.html">박용준</a>
+    <a href="graduation_work.html">졸업작품</a>
+    <a href="career.html">경력</a>
+    <a>자기소개서</a>
+    <a>취미생활</a>
+    <a href="develop_note.html">개발노트</a>
+    <a href="study.html">공부</a>
+  </section>
+  <section class="sec_sidebar">
+    <div class="sec_sidebar_toggleBtn">
+      <i class="fas fa-bars"></i>
+    </div>
+    <a href="#top" class="sec_sidebar_up">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+  </section>
+  <progress class="web_scroll" value="50" min="0" max="100"></progress>
+  <section class="header">
+    <div>Coding - Hash</div>
+  </section>
+  <section class="YJ_body">
+    <details class="details">
+      <summary class="date">Hash</summary>
+      <pre>
+        기본적인 Array의 탐색 시간 복잡도(Time Complexity)는 O(N)라 선형검색을 해야하지만 Hash Table을 사용하면 시간 복잡도는 O(1)이다.
+        상수인것이다.
+        Key(string)와 Value(int)를 사용한다.
+        Hash Talble은 Array를 내재하고 있지만 Hash Function을 사용하기 때문에 빠르다.
+        Hash Function은 내가 저장하고싶은 key를 Index 형태의 숫자로 바꾼다.
+
+        Hash Function을 사용했을때 Key-> Key2(Index)로 바뀌면서 다른 Key이지만 Key2가 같을 수 있는데
+        Collision 해쉬 충돌이라고 한다.
+
+        해결 방법은 두 가지로 Key2에서 한 번더 배열을 들어가 선형검색 O(N)을 하여 찾아내는 방법이 있고 더 복잡한 Hash Function을쓰는 경우가 있다.
+
+        Differt Keys-> Same code Different Code-> Same Index
+
+      </pre>
+      <a target="_blank" href="https://math-coding.tistory.com/31">참고자료</a>
+    </details>
+    <details class="details">
+      <summary class="date">완주하지 못한 선수</summary>
+      <pre>
+        from Programmers
+        수많은 마라톤 선수들이 마라톤에 참여하였습니다. 단 한 명의 선수를 제외하고는 모든 선수가 마라톤을 완주하였습니다.
+
+        마라톤에 참여한 선수들의 이름이 담긴 배열 participant와 완주한 선수들의 이름이 담긴 배열 completion이 주어질 때, 완주하지 못한 선수의 이름을 return 하도록 solution 함수를 작성해주세요.
+        
+        제한사항
+        마라톤 경기에 참여한 선수의 수는 1명 이상 100,000명 이하입니다.
+        completion의 길이는 participant의 길이보다 1 작습니다.
+        참가자의 이름은 1개 이상 20개 이하의 알파벳 소문자로 이루어져 있습니다.
+        참가자 중에는 동명이인이 있을 수 있습니다.
+        입출력 예
+        participant	completion	return
+        ["leo", "kiki", "eden"]	["eden", "kiki"]	"leo"
+        ["marina", "josipa", "nikola", "vinko", "filipa"]	["josipa", "filipa", "marina", "nikola"]	"vinko"
+        ["mislav", "stanko", "mislav", "ana"]	["stanko", "ana", "mislav"]	"mislav"
+        입출력 예 설명
+        예제 #1
+        "leo"는 참여자 명단에는 있지만, 완주자 명단에는 없기 때문에 완주하지 못했습니다.
+        
+        예제 #2
+        "vinko"는 참여자 명단에는 있지만, 완주자 명단에는 없기 때문에 완주하지 못했습니다.
+        
+        예제 #3
+        "mislav"는 참여자 명단에는 두 명이 있지만, 완주자 명단에는 한 명밖에 없기 때문에 한명은 완주하지 못했습니다.
+      </pre>
+      <xmp>
+        My Answer
+
+        #include <string>
+          #include <vector>
+          #include <unordered_map>
+          #include <iostream>
+          
+          using namespace std;
+          
+          string solution(vector<string> participant, vector<string> completion) {
+              string answer = "";
+              unordered_map<string, int> um;
+              for(auto i : completion){
+                  if(um.find(i)!=um.end()){
+                    um[i]++; 
+                  }
+                  else{
+                      um.emplace(i, 1);
+                  }
+              }
+              for(int i=0;i < participant.size();i++){
+                  if(um.find(participant[i])==um.end()){
+                      return participant[i];
+                  }
+                  else if(um.find(participant[i])!=um.end()){
+                    um[participant[i]]--; 
+                      if(um[participant[i]]<0){
+                          return participant[i];
+                      }
+                  }
+              }
+              return answer;
+          }
+      </xmp>
+    </details>
+    <details class="details">
+      <summary class="date">전화번호 목록</summary>
+      <pre>
+        from Programmers
+        문제 설명
+        전화번호부에 적힌 전화번호 중, 한 번호가 다른 번호의 접두어인 경우가 있는지 확인하려 합니다.
+        전화번호가 다음과 같을 경우, 구조대 전화번호는 영석이의 전화번호의 접두사입니다.
+        
+        구조대 : 119
+        박준영 : 97 674 223
+        지영석 : 11 9552 4421
+        전화번호부에 적힌 전화번호를 담은 배열 phone_book 이 solution 함수의 매개변수로 주어질 때, 어떤 번호가 다른 번호의 접두어인 경우가 있으면 false를 그렇지 않으면 true를 return 하도록 solution 함수를 작성해주세요.
+        
+        제한 사항
+        phone_book의 길이는 1 이상 1,000,000 이하입니다.
+        각 전화번호의 길이는 1 이상 20 이하입니다.
+        같은 전화번호가 중복해서 들어있지 않습니다.
+        입출력 예제
+        phone_book	return
+        ["119", "97674223", "1195524421"]	false
+        ["123","456","789"]	true
+        ["12","123","1235","567","88"]	false
+        입출력 예 설명
+        입출력 예 #1
+        앞에서 설명한 예와 같습니다.
+        
+        입출력 예 #2
+        한 번호가 다른 번호의 접두사인 경우가 없으므로, 답은 true입니다.
+        
+        입출력 예 #3
+        첫 번째 전화번호, “12”가 두 번째 전화번호 “123”의 접두사입니다. 따라서 답은 false입니다.
+        
+      </pre>
+      <xmp>
+        #include <string>
+        #include <vector>
+        #include <iostream>
+        #include <unordered_map>
+        using namespace std;
+        
+        bool solution(vector<string> phone_book) {
+            bool answer = true;
+            unordered_map<string,int> um;
+            int cnt =0;
+            for(auto i : phone_book){
+                um.emplace(i, cnt++);
+            }
+              
+            for(int i=0; i<phone_book.size();i++){
+                for(int j=1; j<phone_book[i].size();j++){
+                    if(um.count(phone_book[i].substr(0,j))){
+                        return false;
+                    }
+                }
+            }
+            return answer;
+        }
+      </xmp>
+    </details>
+  </details>
+  <details class="details">
+    <summary class="date">위장</summary>
+    <pre>
+      from Programmers
+      문제 설명
+      스파이들은 매일 다른 옷을 조합하여 입어 자신을 위장합니다.
+
+      예를 들어 스파이가 가진 옷이 아래와 같고 오늘 스파이가 동그란 안경, 긴 코트, 파란색 티셔츠를 입었다면 다음날은 청바지를 추가로 입거나 동그란 안경 대신 검정 선글라스를 착용하거나 해야 합니다.
+
+      종류	이름
+      얼굴	동그란 안경, 검정 선글라스
+      상의	파란색 티셔츠
+      하의	청바지
+      겉옷	긴 코트
+      스파이가 가진 의상들이 담긴 2차원 배열 clothes가 주어질 때 서로 다른 옷의 조합의 수를 return 하도록 solution 함수를 작성해주세요.
+
+      제한사항
+      clothes의 각 행은 [의상의 이름, 의상의 종류]로 이루어져 있습니다.
+      스파이가 가진 의상의 수는 1개 이상 30개 이하입니다.
+      같은 이름을 가진 의상은 존재하지 않습니다.
+      clothes의 모든 원소는 문자열로 이루어져 있습니다.
+      모든 문자열의 길이는 1 이상 20 이하인 자연수이고 알파벳 소문자 또는 '_' 로만 이루어져 있습니다.
+      스파이는 하루에 최소 한 개의 의상은 입습니다.
+      입출력 예
+      clothes	return
+      [["yellowhat", "headgear"], ["bluesunglasses", "eyewear"], ["green_turban", "headgear"]]	5
+      [["crowmask", "face"], ["bluesunglasses", "face"], ["smoky_makeup", "face"]]	3
+      입출력 예 설명
+      예제 #1
+      headgear에 해당하는 의상이 yellow_hat, green_turban이고 eyewear에 해당하는 의상이 blue_sunglasses이므로 아래와 같이 5개의 조합이 가능합니다.
+
+      1. yellow_hat
+      2. blue_sunglasses
+      3. green_turban
+      4. yellow_hat + blue_sunglasses
+      5. green_turban + blue_sunglasses
+      예제 #2
+      face에 해당하는 의상이 crow_mask, blue_sunglasses, smoky_makeup이므로 아래와 같이 3개의 조합이 가능합니다.
+
+      1. crow_mask
+      2. blue_sunglasses
+      3. smoky_makeup
+    </pre>
+    <xmp>
+      #include <string>
+      #include <vector>
+      #include <iostream>
+      #include <unordered_map>
+      using namespace std;
+      
+      int solution(vector<vector<string>> clothes) {
+          unordered_map <string, int> um;
+          int answer = 1;
+          for(int i=0;i<clothes.size();i++)
+              um[clothes[i][1]]++;
+          for(auto i=um.begin();i!=um.end();i++){
+              answer*=(i->second+1);
+          }
+          answer--;
+          return answer;
+      }
+    </xmp>
+  </details>
+  </details>
+  <details class="details">
+    <summary class="date">베스트앨범</summary>
+    <pre>
+      from Programmers
+      문제 설명
+      스트리밍 사이트에서 장르 별로 가장 많이 재생된 노래를 두 개씩 모아 베스트 앨범을 출시하려 합니다. 노래는 고유 번호로 구분하며, 노래를 수록하는 기준은 다음과 같습니다.
+      
+      속한 노래가 많이 재생된 장르를 먼저 수록합니다.
+      장르 내에서 많이 재생된 노래를 먼저 수록합니다.
+      장르 내에서 재생 횟수가 같은 노래 중에서는 고유 번호가 낮은 노래를 먼저 수록합니다.
+      노래의 장르를 나타내는 문자열 배열 genres와 노래별 재생 횟수를 나타내는 정수 배열 plays가 주어질 때, 베스트 앨범에 들어갈 노래의 고유 번호를 순서대로 return 하도록 solution 함수를 완성하세요.
+      
+      제한사항
+      genres[i]는 고유번호가 i인 노래의 장르입니다.
+      plays[i]는 고유번호가 i인 노래가 재생된 횟수입니다.
+      genres와 plays의 길이는 같으며, 이는 1 이상 10,000 이하입니다.
+      장르 종류는 100개 미만입니다.
+      장르에 속한 곡이 하나라면, 하나의 곡만 선택합니다.
+      모든 장르는 재생된 횟수가 다릅니다.
+      입출력 예
+      genres	plays	return
+      ["classic", "pop", "classic", "classic", "pop"]	[500, 600, 150, 800, 2500]	[4, 1, 3, 0]
+      입출력 예 설명
+      classic 장르는 1,450회 재생되었으며, classic 노래는 다음과 같습니다.
+      
+      고유 번호 3: 800회 재생
+      고유 번호 0: 500회 재생
+      고유 번호 2: 150회 재생
+      pop 장르는 3,100회 재생되었으며, pop 노래는 다음과 같습니다.
+      
+      고유 번호 4: 2,500회 재생
+      고유 번호 1: 600회 재생
+      따라서 pop 장르의 [4, 1]번 노래를 먼저, classic 장르의 [3, 0]번 노래를 그다음에 수록합니다.
+    </pre>
+    <xmp>
+ 
+    </xmp>
+  </details>
+</section>
+  <section class="contact">
+    <img src="../IMG/박용준1.jpg" alt="">
+    <div class="information">
+      <div class="head">Contact</div>
+      <li>Address : 서울특별시 서대문구 북아현로22길 18 (힐사이드빌) 302호</li>
+      <li>E-mail : june3004@naver.com</li>
+      <li>Tel : 010-5886-9393</li>
+    </div>
+  </section>
+  <section class="about_page">
+    이 페이지는 프로필, 일기장, 정보공유, 공부 포트폴리오로 만들 예정입니다.
+  </section>
+  <section>
+    <footer clss="BGcopyright">
+    </footer>
+    <footer class="footbar">
+      <div class="BGCopyright">Angela Roma 님의 사진, 출처: Pexels, Ammar Ahmed 님의 사진, 출처: Pexels, Thirdman 님의 사진, 출처: Pexels</div>
+      <div class="footbar_menu">@2022 Park Yong Jun All rights reserved.</div>
+    </footer>
+  </section>
+</body>
+</html>

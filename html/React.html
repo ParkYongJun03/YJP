@@ -7,7 +7,7 @@
   
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Roboto+Slab&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Open+Sans:wght@300&family=Roboto+Slab&display=swap" rel="stylesheet">  <link rel="stylesheet" href="../src/css/React.css">
   <link rel="stylesheet" href="../src/css/React.css">
   <link rel="stylesheet" href="../src/css/default/default.css">
   <link rel="stylesheet" href="../src/css/default/default_sidebar.css">
@@ -64,6 +64,20 @@
       1. cd client
       2. yarn start해서 React 서버 실행
     </details>
+    <details class="details">
+      <summary class="date">Component 사용방법</summary>
+      <pre>
+        import React, {Component} from 'react';
+        class R003_ImportComponent extends Component{
+          render(){
+            return (
+                <h2>[This is Imported Component]</h2>
+            )
+          }
+        }
+        export default R003_ImportComponent
+      </pre>
+      </details>
   </section>
   <section class="contact">
     <img src="../IMG/박용준1.jpg" alt="">
