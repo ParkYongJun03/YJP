@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Open+Sans:wght@300&family=Roboto+Slab&display=swap" rel="stylesheet">  <link rel="stylesheet" href="../src/css/React.css">
+  <link rel="stylesheet" href="../src/css/default/default.css">
+  <link rel="stylesheet" href="../src/css/default/default_sidebar.css">
+  <link rel="stylesheet" href="../src/css/default/default_scroll.css">
+  <link rel="stylesheet" href="../src/css/default/default_contact.css">
+
+  <script defer src="https://kit.fontawesome.com/a7842f1d8c.js" crossorigin="anonymous"></script>
+  <script src="../src/js/sidebar.js" defer></script>
+  <script src="../src/js/web_scroll.js" defer></script>
+  <title>Liam Park</title>
+</head>
+<body>
+  <section class="sidebar">
+    <div class="div_1">통합검색</div>
+    <input list="Integrate_Search" id="search" name="search" />
+    <datalist id="Integrate_Search">
+        <option value="졸업작품">
+        <option value="경력">
+        <option value="자기소개서">
+        <option value="취미생활">
+        <option value="개발노트">
+        <option value="공부">
+      </datalist>
+    <a href="YJP.html">박용준</a>
+    <a href="graduation_work.html">졸업작품</a>
+    <a href="career.html">경력</a>
+    <a>자기소개서</a>
+    <a>취미생활</a>
+    <a href="develop_note.html">개발노트</a>
+    <a href="study.html">공부</a>
+  </section>
+  <section class="sec_sidebar">
+    <div class="sec_sidebar_toggleBtn">
+      <i class="fas fa-bars"></i>
+    </div>
+    <a href="#top" class="sec_sidebar_up">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+  </section>
+  <progress class="web_scroll" value="50" min="0" max="100"></progress>
+  <section class="header">
+    <div>Coding - 정렬</div>
+  </section>
+  <section class="YJ_body">
+    <details class="details">
+      <summary class="date">K번째수</summary>
+      <pre>
+        from Programmers
+        문제 설명
+        배열 array의 i번째 숫자부터 j번째 숫자까지 자르고 정렬했을 때, k번째에 있는 수를 구하려 합니다.
+        
+        예를 들어 array가 [1, 5, 2, 6, 3, 7, 4], i = 2, j = 5, k = 3이라면
+        
+        array의 2번째부터 5번째까지 자르면 [5, 2, 6, 3]입니다.
+        1에서 나온 배열을 정렬하면 [2, 3, 5, 6]입니다.
+        2에서 나온 배열의 3번째 숫자는 5입니다.
+        배열 array, [i, j, k]를 원소로 가진 2차원 배열 commands가 매개변수로 주어질 때, commands의 모든 원소에 대해 앞서 설명한 연산을 적용했을 때 나온 결과를 배열에 담아 return 하도록 solution 함수를 작성해주세요.
+        
+        제한사항
+        array의 길이는 1 이상 100 이하입니다.
+        array의 각 원소는 1 이상 100 이하입니다.
+        commands의 길이는 1 이상 50 이하입니다.
+        commands의 각 원소는 길이가 3입니다.
+        입출력 예
+        array	commands	return
+        [1, 5, 2, 6, 3, 7, 4]	[[2, 5, 3], [4, 4, 1], [1, 7, 3]]	[5, 6, 3]
+        입출력 예 설명
+        [1, 5, 2, 6, 3, 7, 4]를 2번째부터 5번째까지 자른 후 정렬합니다. [2, 3, 5, 6]의 세 번째 숫자는 5입니다.
+        [1, 5, 2, 6, 3, 7, 4]를 4번째부터 4번째까지 자른 후 정렬합니다. [6]의 첫 번째 숫자는 6입니다.
+        [1, 5, 2, 6, 3, 7, 4]를 1번째부터 7번째까지 자릅니다. [1, 2, 3, 4, 5, 6, 7]의 세 번째 숫자는 3입니다.
+      </pre>
+      <xmp>
+        #include <string>
+        #include <vector>
+        #include <algorithm>
+        using namespace std;
+        
+        vector<int> solution(vector<int> array, vector<vector<int>> commands) {
+            vector<int> answer;
+            for(int i=0;i<commands.size();i++){
+                vector<int> temp;
+                for(int j=commands[i][0]-1;j<=commands[i][1]-1;j++){
+                    temp.push_back(array[j]);
+                }
+                sort(temp.begin(), temp.end());
+                for(int i=0;i<temp.size();i++){
+                }
+                answer.push_back(temp[commands[i][2]-1]);
+            }
+            return answer;
+        }
+      </xmp>
+    </details> 
+    <details class="details">
+      <summary class="date">가장 큰 수</summary>
+      <pre>
+        from Programmers
+        문제 설명
+0 또는 양의 정수가 주어졌을 때, 정수를 이어 붙여 만들 수 있는 가장 큰 수를 알아내 주세요.
+
+예를 들어, 주어진 정수가 [6, 10, 2]라면 [6102, 6210, 1062, 1026, 2610, 2106]를 만들 수 있고, 이중 가장 큰 수는 6210입니다.
+
+0 또는 양의 정수가 담긴 배열 numbers가 매개변수로 주어질 때, 순서를 재배치하여 만들 수 있는 가장 큰 수를 문자열로 바꾸어 return 하도록 solution 함수를 작성해주세요.
+
+제한 사항
+numbers의 길이는 1 이상 100,000 이하입니다.
+numbers의 원소는 0 이상 1,000 이하입니다.
+정답이 너무 클 수 있으니 문자열로 바꾸어 return 합니다.
+입출력 예
+numbers	return
+[6, 10, 2]	"6210"
+[3, 30, 34, 5, 9]	"9534330"
+      </pre>
+      <xmp>
+        #include <string>
+        #include <vector>
+        #include <iostream>
+        #include <algorithm>
+        using namespace std;
+        bool compare(string a, string b){
+            return a+b>b+a;
+        }
+        string solution(vector<int> numbers) {
+            string answer = "";
+            vector<string> temp;
+            for(int i=0;i<numbers.size();i++){
+                temp.push_back(to_string(numbers[i]));
+            }
+            sort(temp.begin(), temp.end(), compare);
+            for(int i=0;i<numbers.size();i++){
+                answer+=temp[i];
+            }
+            if(answer[0]=='0'){
+                return "0";
+            }
+            return answer;
+        }
+      </xmp>
+    </details> 
+    <details class="details">
+      <summary class="date">H-Index</summary>
+      <pre>
+        from Programmers
+        문제 설명
+        H-Index는 과학자의 생산성과 영향력을 나타내는 지표입니다. 어느 과학자의 H-Index를 나타내는 값인 h를 구하려고 합니다. 위키백과1에 따르면, H-Index는 다음과 같이 구합니다.
+        
+        어떤 과학자가 발표한 논문 n편 중, h번 이상 인용된 논문이 h편 이상이고 나머지 논문이 h번 이하 인용되었다면 h의 최댓값이 이 과학자의 H-Index입니다.
+        
+        어떤 과학자가 발표한 논문의 인용 횟수를 담은 배열 citations가 매개변수로 주어질 때, 이 과학자의 H-Index를 return 하도록 solution 함수를 작성해주세요.
+        
+        제한사항
+        과학자가 발표한 논문의 수는 1편 이상 1,000편 이하입니다.
+        논문별 인용 횟수는 0회 이상 10,000회 이하입니다.
+        입출력 예
+        citations	return
+        [3, 0, 6, 1, 5]	3
+        입출력 예 설명
+        이 과학자가 발표한 논문의 수는 5편이고, 그중 3편의 논문은 3회 이상 인용되었습니다. 그리고 나머지 2편의 논문은 3회 이하 인용되었기 때문에 이 과학자의 H-Index는 3입니다.
+        
+        ※ 공지 - 2019년 2월 28일 테스트 케이스가 추가되었습니다.
+        
+        
+      </pre>
+      <xmp>
+        #include <string>
+          #include <vector>
+          #include <algorithm>
+          
+          using namespace std;
+          
+          int solution(vector<int> citations) {
+              sort(citations.begin(), citations.end(), greater<int>());
+          
+              for (int i = 0; i < citations.size(); ++i) {
+                  if (citations[i] < i + 1) {
+                      return i;
+                  }
+              }
+          
+              return citations.size();
+          }
+      </xmp>
+    </details> 
+  </section>
+  <section class="contact">
+    <img src="../IMG/박용준1.jpg" alt="">
+    <div class="information">
+      <div class="head">Contact</div>
+      <li>Address : 서울특별시 서대문구 북아현로22길 18 (힐사이드빌) 302호</li>
+      <li>E-mail : june3004@naver.com</li>
+      <li>Tel : 010-5886-9393</li>
+    </div>
+  </section>
+  <section class="about_page">
+    이 페이지는 프로필, 일기장, 정보공유, 공부 포트폴리오로 만들 예정입니다.
+  </section>
+  <section>
+    <footer clss="BGcopyright">
+    </footer>
+    <footer class="footbar">
+      <div class="BGCopyright">Angela Roma 님의 사진, 출처: Pexels, Ammar Ahmed 님의 사진, 출처: Pexels, Thirdman 님의 사진, 출처: Pexels</div>
+      <div class="footbar_menu">@2022 Park Yong Jun All rights reserved.</div>
+    </footer>
+  </section>
+</body>
+</html>
