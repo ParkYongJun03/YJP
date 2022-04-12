@@ -78,7 +78,35 @@
         export default R003_ImportComponent
       </pre>
       </details>
-  </section>
+      <details class="details">
+        <summary class="date">생명주기 함수</summary>
+        <pre>
+          constructor는 가장 먼저 실행되며, 처음 한 번만 호출된다.
+          static getDerivedStateFromProps(props, state)는 constructor다음으로 실행된다.
+          
+          componentDidMount는 제일 마지막
+  constructor(props){
+    super(props);
+    this.state = {};
+    console.log('1. constructor Call');
+  }
+  static getDerivedStateFromProps(props, state){
+    console.log('2. getDerivedStateFromProps Call : '+props.prop_value);
+    return {tmp_state:props.prop_value};
+  }
+  render(){
+    console.log('3.render Call');
+    return (
+      <h2>[This is CONSTRUCTOR FUNCTION]</h2>
+    )
+  }
+  componentDidMount(){
+    console.log('4. componentDidMount Call');
+    console.log('5. tmp_state : '+this.state.tmp_state);
+  }
+        </pre>
+        </details>
+    </section>
   <section class="contact">
     <img src="../IMG/박용준1.jpg" alt="">
     <div class="information">

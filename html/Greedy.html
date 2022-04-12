@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&family=Open+Sans:wght@300&family=Roboto+Slab&display=swap" rel="stylesheet">  <link rel="stylesheet" href="../src/css/React.css">
+  <link rel="stylesheet" href="../src/css/default/default.css">
+  <link rel="stylesheet" href="../src/css/default/default_sidebar.css">
+  <link rel="stylesheet" href="../src/css/default/default_scroll.css">
+  <link rel="stylesheet" href="../src/css/default/default_contact.css">
+
+  <script defer src="https://kit.fontawesome.com/a7842f1d8c.js" crossorigin="anonymous"></script>
+  <script src="../src/js/sidebar.js" defer></script>
+  <script src="../src/js/web_scroll.js" defer></script>
+  <title>Liam Park</title>
+</head>
+<body>
+  <section class="sidebar">
+    <div class="div_1">통합검색</div>
+    <input list="Integrate_Search" id="search" name="search" />
+    <datalist id="Integrate_Search">
+        <option value="졸업작품">
+        <option value="경력">
+        <option value="자기소개서">
+        <option value="취미생활">
+        <option value="개발노트">
+        <option value="공부">
+      </datalist>
+    <a href="YJP.html">박용준</a>
+    <a href="graduation_work.html">졸업작품</a>
+    <a href="career.html">경력</a>
+    <a>자기소개서</a>
+    <a>취미생활</a>
+    <a href="develop_note.html">개발노트</a>
+    <a href="study.html">공부</a>
+  </section>
+  <section class="sec_sidebar">
+    <div class="sec_sidebar_toggleBtn">
+      <i class="fas fa-bars"></i>
+    </div>
+    <a href="#top" class="sec_sidebar_up">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+  </section>
+  <progress class="web_scroll" value="50" min="0" max="100"></progress>
+  <section class="header">
+    <div>Coding - Greedy</div>
+  </section>
+  <section class="YJ_body">
+    <details class="details">
+      <summary class="date">next_permutation(prev_permutation)</summary>
+      <xmp>
+        #include <algorithm>
+        do{
+          for(int i=0; i<4; i++)
+            cout << v[i] << " ";
+        }while(next_permutation(v.begin(),v.end()));
+      </xmp>
+    </details>
+    <details class="details">
+      <summary class="date">체육복</summary>
+      <pre>
+        from Programmers
+        문제 설명
+        점심시간에 도둑이 들어, 일부 학생이 체육복을 도난당했습니다. 다행히 여벌 체육복이 있는 학생이 이들에게 체육복을 빌려주려 합니다. 학생들의 번호는 체격 순으로 매겨져 있어, 바로 앞번호의 학생이나 바로 뒷번호의 학생에게만 체육복을 빌려줄 수 있습니다. 예를 들어, 4번 학생은 3번 학생이나 5번 학생에게만 체육복을 빌려줄 수 있습니다. 체육복이 없으면 수업을 들을 수 없기 때문에 체육복을 적절히 빌려 최대한 많은 학생이 체육수업을 들어야 합니다.
+        
+        전체 학생의 수 n, 체육복을 도난당한 학생들의 번호가 담긴 배열 lost, 여벌의 체육복을 가져온 학생들의 번호가 담긴 배열 reserve가 매개변수로 주어질 때, 체육수업을 들을 수 있는 학생의 최댓값을 return 하도록 solution 함수를 작성해주세요.
+        
+        제한사항
+        전체 학생의 수는 2명 이상 30명 이하입니다.
+        체육복을 도난당한 학생의 수는 1명 이상 n명 이하이고 중복되는 번호는 없습니다.
+        여벌의 체육복을 가져온 학생의 수는 1명 이상 n명 이하이고 중복되는 번호는 없습니다.
+        여벌 체육복이 있는 학생만 다른 학생에게 체육복을 빌려줄 수 있습니다.
+        여벌 체육복을 가져온 학생이 체육복을 도난당했을 수 있습니다. 이때 이 학생은 체육복을 하나만 도난당했다고 가정하며, 남은 체육복이 하나이기에 다른 학생에게는 체육복을 빌려줄 수 없습니다.
+        입출력 예
+        n	lost	reserve	return
+        5	[2, 4]	[1, 3, 5]	5
+        5	[2, 4]	[3]	4
+        3	[3]	[1]	2
+        입출력 예 설명
+        예제 #1
+        1번 학생이 2번 학생에게 체육복을 빌려주고, 3번 학생이나 5번 학생이 4번 학생에게 체육복을 빌려주면 학생 5명이 체육수업을 들을 수 있습니다.
+        
+        예제 #2
+        3번 학생이 2번 학생이나 4번 학생에게 체육복을 빌려주면 학생 4명이 체육수업을 들을 수 있습니다.
+      </pre>
+      <xmp>
+        #include <string>
+        #include <vector>
+        #include <algorithm>
+        using namespace std;
+        
+        int solution(int n, vector<int> lost, vector<int> reserve) {
+            int answer = 0;
+            sort(lost.begin(), lost.end());
+            sort(reserve.begin(), reserve.end());
+            for(int i=0;i<lost.size();i++){
+                for(int j=0;j<reserve.size();j++){
+                    if(lost[i]==reserve[j]){
+                        lost.erase(lost.begin()+i);
+                        reserve.erase(reserve.begin()+j);
+                        i--;
+                        j--;
+                    }
+                }
+            }
+            
+            for(int i=0;i<lost.size();i++){
+                for(int j=0;j<reserve.size();j++){
+                    if(lost[i]-1==reserve[j]){
+                        lost.erase(lost.begin()+i);
+                        reserve.erase(reserve.begin()+j);
+                        i--;
+                        j--;
+                    }
+                    if(lost[i]+1==reserve[j]){
+                        lost.erase(lost.begin()+i);
+                        reserve.erase(reserve.begin()+j);
+                        i--;
+                        j--;
+                    }
+                }
+            }
+            answer=n-lost.size();
+            return answer;
+        }
+      </xmp>
+    </details> 
+    <details class="details">
+      <summary class="date">조이스틱</summary>
+      <pre>
+        from Programmers
+        문제 설명
+        조이스틱으로 알파벳 이름을 완성하세요. 맨 처음엔 A로만 이루어져 있습니다.
+        ex) 완성해야 하는 이름이 세 글자면 AAA, 네 글자면 AAAA
+        
+        조이스틱을 각 방향으로 움직이면 아래와 같습니다.
+        
+        ▲ - 다음 알파벳
+        ▼ - 이전 알파벳 (A에서 아래쪽으로 이동하면 Z로)
+        ◀ - 커서를 왼쪽으로 이동 (첫 번째 위치에서 왼쪽으로 이동하면 마지막 문자에 커서)
+        ▶ - 커서를 오른쪽으로 이동 (마지막 위치에서 오른쪽으로 이동하면 첫 번째 문자에 커서)
+        예를 들어 아래의 방법으로 "JAZ"를 만들 수 있습니다.
+        
+        - 첫 번째 위치에서 조이스틱을 위로 9번 조작하여 J를 완성합니다.
+        - 조이스틱을 왼쪽으로 1번 조작하여 커서를 마지막 문자 위치로 이동시킵니다.
+        - 마지막 위치에서 조이스틱을 아래로 1번 조작하여 Z를 완성합니다.
+        따라서 11번 이동시켜 "JAZ"를 만들 수 있고, 이때가 최소 이동입니다.
+        만들고자 하는 이름 name이 매개변수로 주어질 때, 이름에 대해 조이스틱 조작 횟수의 최솟값을 return 하도록 solution 함수를 만드세요.
+        
+        제한 사항
+        name은 알파벳 대문자로만 이루어져 있습니다.
+        name의 길이는 1 이상 20 이하입니다.
+        입출력 예
+        name	return
+        "JEROEN"	56
+        "JAN"	23
+      </pre>
+      <xmp>
+        #include <string>
+        #include <vector>
+        #include <algorithm>
+        
+        using namespace std;
+        
+        int LUT[] = { 0,1,2,3,4,5,6,7,8,9,10,11,12,13,12,11,10,9,8,7,6,5,4,3,2,1 };
+        //LUT로 A로부터의 거리를 구한다
+        int solution(string name) {
+            int answer = 0;
+            for (auto ch : name)
+                answer += LUT[ch - 'A'];
+            int len = name.length();
+            int left_right = len - 1;
+            for (int i = 0; i < len; ++i) {
+                int next_i = i + 1;
+                while (next_i < len && name[next_i] == 'A')
+                    next_i++;
+                left_right = min(left_right, i + len - next_i + min(i, len - next_i));
+            }
+            answer += left_right;
+            return answer;
+        }
+      </xmp>
+    </details> 
+    <details class="details">
+      <summary class="date">큰 수 만들기</summary>
+      <pre>
+        from Programmers
+        문제 설명
+어떤 숫자에서 k개의 수를 제거했을 때 얻을 수 있는 가장 큰 숫자를 구하려 합니다.
+
+예를 들어, 숫자 1924에서 수 두 개를 제거하면 [19, 12, 14, 92, 94, 24] 를 만들 수 있습니다. 이 중 가장 큰 숫자는 94 입니다.
+
+문자열 형식으로 숫자 number와 제거할 수의 개수 k가 solution 함수의 매개변수로 주어집니다. number에서 k 개의 수를 제거했을 때 만들 수 있는 수 중 가장 큰 숫자를 문자열 형태로 return 하도록 solution 함수를 완성하세요.
+
+제한 조건
+number는 1자리 이상, 1,000,000자리 이하인 숫자입니다.
+k는 1 이상 number의 자릿수 미만인 자연수입니다.
+입출력 예
+number	k	return
+"1924"	2	"94"
+"1231234"	3	"3234"
+"4177252841"	4	"775841"
+      </pre>
+      <xmp>
+        #include <string>
+        #include <vector>
+        using namespace std;
+        string solution(string number, int k) {
+            string answer = number;
+            int m = k;
+            int loopCnt =0;
+            while (m > 0) {
+                if(loopCnt == k){break;}
+                int i = 0; bool down = false;
+                while (i < answer.size() - 1) {
+                    if (answer[i] < answer[i + 1]) {
+                        down = true;
+                        break;
+                    }
+                    i++;
+                }
+                if (down) {
+                    answer.erase(answer.begin() + i);
+                    m--;
+                } else {
+                    answer.erase(answer.end() - m, answer.end());
+                }
+                loopCnt++;
+            }
+            return answer;
+        }
+    </xmp>
+    </details> 
+    <details class="details">
+      <summary class="date">구명보트</summary>
+      <pre>
+        from Programmers
+        문제 설명
+        무인도에 갇힌 사람들을 구명보트를 이용하여 구출하려고 합니다. 구명보트는 작아서 한 번에 최대 2명씩 밖에 탈 수 없고, 무게 제한도 있습니다.
+        
+        예를 들어, 사람들의 몸무게가 [70kg, 50kg, 80kg, 50kg]이고 구명보트의 무게 제한이 100kg이라면 2번째 사람과 4번째 사람은 같이 탈 수 있지만 1번째 사람과 3번째 사람의 무게의 합은 150kg이므로 구명보트의 무게 제한을 초과하여 같이 탈 수 없습니다.
+        
+        구명보트를 최대한 적게 사용하여 모든 사람을 구출하려고 합니다.
+        
+        사람들의 몸무게를 담은 배열 people과 구명보트의 무게 제한 limit가 매개변수로 주어질 때, 모든 사람을 구출하기 위해 필요한 구명보트 개수의 최솟값을 return 하도록 solution 함수를 작성해주세요.
+        
+        제한사항
+        무인도에 갇힌 사람은 1명 이상 50,000명 이하입니다.
+        각 사람의 몸무게는 40kg 이상 240kg 이하입니다.
+        구명보트의 무게 제한은 40kg 이상 240kg 이하입니다.
+        구명보트의 무게 제한은 항상 사람들의 몸무게 중 최댓값보다 크게 주어지므로 사람들을 구출할 수 없는 경우는 없습니다.
+        입출력 예
+        people	limit	return
+        [70, 50, 80, 50]	100	3
+        [70, 80, 50]	100	3
+      </pre>
+      <xmp>
+        #include <string>
+          #include <vector>
+          #include <algorithm>
+          #include <iostream>
+          using namespace std;
+          
+          int solution(vector<int> people, int limit) {
+              sort(people.begin(), people.end(), greater<int>());
+              int answer = people.size();
+              //limit보다 작은 수였으면 좋겠다.
+              for(int idx_f=0, idx_s=people.size()-1;idx_f<idx_s;idx_f++){
+                  if(people[idx_f]<=limit/2){
+                      answer-=(idx_s+1-idx_f)/2;
+                      break;
+                  }
+                  if(people[idx_f]+people[idx_s]<=limit){
+                      answer--;
+                      idx_s--;
+                  }
+              }
+              return answer;
+          }    
+      </xmp>
+    </details> 
+    <details class="details">
+      <summary class="date">섬 연결하기</summary>
+      <pre>
+        from Programmers
+        문제 설명
+        n개의 섬 사이에 다리를 건설하는 비용(costs)이 주어질 때, 최소의 비용으로 모든 섬이 서로 통행 가능하도록 만들 때 필요한 최소 비용을 return 하도록 solution을 완성하세요.
+        
+        다리를 여러 번 건너더라도, 도달할 수만 있으면 통행 가능하다고 봅니다. 예를 들어 A 섬과 B 섬 사이에 다리가 있고, B 섬과 C 섬 사이에 다리가 있으면 A 섬과 C 섬은 서로 통행 가능합니다.
+        
+        제한사항
+        
+        섬의 개수 n은 1 이상 100 이하입니다.
+        costs의 길이는 ((n-1) * n) / 2이하입니다.
+        임의의 i에 대해, costs[i][0] 와 costs[i] [1]에는 다리가 연결되는 두 섬의 번호가 들어있고, costs[i] [2]에는 이 두 섬을 연결하는 다리를 건설할 때 드는 비용입니다.
+        같은 연결은 두 번 주어지지 않습니다. 또한 순서가 바뀌더라도 같은 연결로 봅니다. 즉 0과 1 사이를 연결하는 비용이 주어졌을 때, 1과 0의 비용이 주어지지 않습니다.
+        모든 섬 사이의 다리 건설 비용이 주어지지 않습니다. 이 경우, 두 섬 사이의 건설이 불가능한 것으로 봅니다.
+        연결할 수 없는 섬은 주어지지 않습니다.
+        입출력 예
+        
+        n	costs	return
+        4	[[0,1,1],[0,2,2],[1,2,5],[1,3,1],[2,3,8]]	4
+        입출력 예 설명
+        
+        costs를 그림으로 표현하면 다음과 같으며, 이때 초록색 경로로 연결하는 것이 가장 적은 비용으로 모두를 통행할 수 있도록 만드는 방법입니다.   
+      </pre>
+      <xmp>
+      </xmp>
+    </details> 
+  </section>
+  <section class="contact">
+    <img src="../IMG/박용준1.jpg" alt="">
+    <div class="information">
+      <div class="head">Contact</div>
+      <li>Address : 서울특별시 서대문구 북아현로22길 18 (힐사이드빌) 302호</li>
+      <li>E-mail : june3004@naver.com</li>
+      <li>Tel : 010-5886-9393</li>
+    </div>
+  </section>
+  <section class="about_page">
+    이 페이지는 프로필, 일기장, 정보공유, 공부 포트폴리오로 만들 예정입니다.
+  </section>
+  <section>
+    <footer clss="BGcopyright">
+    </footer>
+    <footer class="footbar">
+      <div class="BGCopyright">Angela Roma 님의 사진, 출처: Pexels, Ammar Ahmed 님의 사진, 출처: Pexels, Thirdman 님의 사진, 출처: Pexels</div>
+      <div class="footbar_menu">@2022 Park Yong Jun All rights reserved.</div>
+    </footer>
+  </section>
+</body>
+</html>

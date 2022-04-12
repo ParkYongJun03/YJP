@@ -1,8 +1,8 @@
+/*
 import logo from './logo.svg';
 import React from 'react';
 import './App.css';
-import ImportComponent from './R003_ImportComponent'
-import LifecycleEx from './R006_LifecycleEx'
+import LifecycleEx from './R008_LifecycleEx'
 function App() {
   return (
     <div className="App">
@@ -20,11 +20,26 @@ function App() {
           Learn React
         </a>
         <h1>시작해볼까?</h1>
-        <ImportComponent></ImportComponent>
         <LifecycleEx prop_value = 'FromApp.js'></LifecycleEx>
       </header>
     </div>
   );
 }
 
+export default App;
+*/
+//템플릿 문자열 사용하기
+import React from 'react';
+import './App.css';
+import Jquery from './R016_Jquery'
+
+function App(){
+  return (
+    <div>
+      <h1>Start React 200!</h1>
+      <p>CSS 적용하기</p>
+      <Jquery/>
+    </div>
+  );
+}
 export default App;
