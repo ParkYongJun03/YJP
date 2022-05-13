@@ -31,14 +31,15 @@ export default App;
 //템플릿 문자열 사용하기
 import React from 'react';
 import './App.css';
-import Jquery from './R016_Jquery'
+import 'bootstrap/dist/css/bootstrap.css'
+import AAA from './R037_ReactstrapDropdown'
 
 function App(){
   return (
     <div>
       <h1>Start React 200!</h1>
       <p>CSS 적용하기</p>
-      <Jquery/>
+      <AAA/>
     </div>
   );
 }
