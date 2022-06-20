@@ -1,7 +1,9 @@
 /* YJ_body */
 .YJ_body {
   display: grid;
-  grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+  grid-template: repeat(1, 0.5fr) repeat(2, 1fr) / repeat(2, 1fr);
+  
+  /* repeat(1, 0.5fr) repeat(2, 1fr) / repeat(2, 1fr); */
   background: #cdc9c6;
 }
 summary {
@@ -9,8 +11,16 @@ summary {
   text-align: left;
 }
 summary::marker {
-  content: ">";
+  content: "-";
   color: brown;
+}
+.sum_2{
+  font-size: 0.9rem;
+  text-align: left;
+}
+.sum_3{
+  font-size: 0.8rem;
+  text-align: left;
 }
 .details {
   width: 85%;
@@ -22,11 +32,8 @@ summary::marker {
   display: grid;
   grid-template: repeat(2, 1fr) / repeat(3, 1fr);
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 0.5rem;
   margin: 0.5rem;
-}
-.date {
-  width: 85%;
 }
 .emphasis_red {
   color: rgb(224, 9, 9);
